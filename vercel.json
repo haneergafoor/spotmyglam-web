@@ -4,6 +4,7 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "env": {
-    "NODE_OPTIONS": "--max-old-space-size=1024"
+    "NODE_OPTIONS": "--max-old-space-size=1024",
+    "NEXT_TELEMETRY_DISABLED": "1"
   }
 }
