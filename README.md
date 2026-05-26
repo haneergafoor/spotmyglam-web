@@ -2,14 +2,14 @@
 
 Premium salon discovery and booking platform built with Next.js, OTP authentication, and Razorpay-ready payments.
 
-## ✨ Features
+## Features
 - OTP login for customers, salon owners, and admins
 - Location-aware salon discovery (20km radius)
 - End-to-end booking flow with Razorpay checkout
 - Booking history, owner dashboard, and admin analytics
 - Monochrome UI system with SpotMyGlam branding
 
-## 🚀 Getting started
+## Getting started
 
 ```bash
 npm install
@@ -18,7 +18,7 @@ npm run dev
 
 Open http://localhost:3000 in your browser.
 
-## 🔐 Environment variables
+## Environment variables
 
 Copy the template and fill in your credentials:
 
@@ -34,21 +34,16 @@ Required:
 - `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`
 - `RAZORPAY_WEBHOOK_SECRET` (for Razorpay webhooks)
 
-## 👥 Demo access
+## Demo access
 
 Use the seeded demo accounts:
 - Admin: **9990000000**
 - Salon Owner: **9990001111**
 
-## 📝 Scripts
+## Scripts
 
 ```bash
-npm run dev      # Start dev server
-npm run lint     # Run ESLint
-npm run build    # Build for production
-npm run start    # Start production server
+npm run dev
+npm run lint
+npm run build
 ```
-
-## 🌐 Deployment
-
-Deployed on Vercel at: https://spotmyglam-web.vercel.app
