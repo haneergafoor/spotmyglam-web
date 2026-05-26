@@ -1,4 +1,4 @@
-type SmsProvider = "twilio" | "msg91";
+type SmsProvider = "twilio" | "msg91" | "demo";
 
 const requireEnv = (name: string) => {
   const value = process.env[name];
@@ -14,6 +14,14 @@ export const sendOtpSms = async (phoneNumber: string, code: string) => {
   const normalized = phoneNumber.startsWith("+")
     ? phoneNumber
     : `+91${phoneNumber}`;
+
+  // Demo mode: Skip SMS sending if credentials not configured
+  if (!process.env.TWILIO_ACCOUNT_SID && !process.env.MSG91_AUTH_KEY) {
+    console.log(
+      `📱 Demo Mode: OTP for ${phoneNumber} is ${code} (SMS not configured)`
+    );
+    return; // Silently succeed in demo mode
+  }
 
   if (provider === "twilio") {
     const accountSid = requireEnv("TWILIO_ACCOUNT_SID");
